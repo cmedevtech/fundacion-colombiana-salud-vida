@@ -1,0 +1,229 @@
+/* ===================================
+   CONTACTO - FUNDACIÓN
+=================================== */
+
+:root {
+    --primary: #009966;
+    --primary-dark: #007a52;
+    --secondary: #0f172a;
+    --text: #475569;
+    --white: #ffffff;
+    --light: #f8fafc;
+    --border: #e2e8f0;
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* HERO */
+
+.page-hero {
+    padding: 180px 0 100px;
+    text-align: center;
+    background:
+        linear-gradient(rgba(15, 23, 42, 0.75),
+        rgba(15, 23, 42, 0.75)),
+        url("../img/contacto-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.page-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.page-description {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* SECCIÓN CONTACTO */
+
+.contact-section {
+    padding: 100px 0;
+    background: linear-gradient(
+        180deg,
+        #f8fafc 0%,
+        #ffffff 100%
+    );
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* TARJETAS */
+
+.contact-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(
+        90deg,
+        var(--primary),
+        #22c55e
+    );
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.contact-card h3 {
+    font-size: 1.4rem;
+    color: var(--secondary);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contact-card p {
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* BOTÓN */
+
+.contact-card .btn {
+    margin-top: 15px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    background: var(--primary);
+    color: var(--white);
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+/* ANIMACIÓN */
+
+.contact-card {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.contact-card:nth-child(2) {
+    animation-delay: .1s;
+}
+
+.contact-card:nth-child(3) {
+    animation-delay: .2s;
+}
+
+.contact-card:nth-child(4) {
+    animation-delay: .3s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+
+    .page-hero {
+        padding: 150px 0 80px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 35px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .page-title {
+        font-size: 2.3rem;
+    }
+
+    .page-description {
+        font-size: 1rem;
+    }
+
+    .contact-section {
+        padding: 70px 0;
+    }
+
+    .contact-card {
+        padding: 30px;
+        border-radius: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .page-hero {
+        padding: 130px 0 70px;
+    }
+
+    .contact-card {
+        padding: 25px;
+    }
+
+    .contact-card h3 {
+        font-size: 1.2rem;
+    }
+
+}

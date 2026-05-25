@@ -1,0 +1,444 @@
+/* ==========================================
+   HERO
+========================================== */
+
+.page-hero{
+
+    position: relative;
+
+    padding: 4rem 0;;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.92),
+            rgba(255,255,255,.92)
+        ),
+        url("../img/volu2.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.page-hero .container{
+
+    max-width: 900px;
+
+    text-align: center;
+}
+
+/* Badge */
+
+.hero-badge{
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: .7rem 1.3rem;
+
+    border-radius: 999px;
+
+    background: rgba(52,126,191,.08);
+
+    color: var(--secondary-color);
+
+    font-size: .9rem;
+
+    font-weight: 600;
+
+    margin-bottom: 1.5rem;
+}
+
+/* Título */
+
+.page-title{
+
+    font-size: clamp(3rem,5vw,4.8rem);
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    color: var(--primary-color);
+
+    margin-bottom: 1.5rem;
+
+    letter-spacing: -1px;
+}
+
+/* Descripción */
+
+.page-description{
+
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    color: var(--text-light);
+}
+
+/* Línea elegante */
+
+.page-title::after{
+
+    content: "";
+
+    display: block;
+
+    width: 90px;
+
+    height: 4px;
+
+    background: var(--secondary-color);
+
+    border-radius: 20px;
+
+    margin: 1.5rem auto 0;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .page-hero{
+        padding: 5rem 0;
+    }
+
+    .page-title{
+        font-size: 2.4rem;
+    }
+
+    .page-description{
+        font-size: 1rem;
+    }
+}
+
+/* ==========================================
+   SECCIONES GENERALES
+========================================== */
+
+.institutional,
+.social-purpose,
+.populations,
+.products{
+    padding:100px 0;
+}
+
+.social-purpose{
+    background:#f8fbff;
+}
+
+.section-tag{
+    display:inline-block;
+
+    color:#2e7edb;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    margin-bottom:1rem;
+}
+
+.section-title{
+    font-size:clamp(2rem,4vw,3rem);
+
+    color:#10355e;
+
+    margin-bottom:2rem;
+
+    line-height:1.2;
+}
+
+/* ==========================================
+   PRESENTACIÓN
+========================================== */
+
+.institutional-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.institutional-image img{
+    width:100%;
+    border-radius:24px;
+    display:block;
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.12);
+}
+
+.content-box{
+    background:#fff;
+
+    padding:2.5rem;
+
+    border-radius:24px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+}
+
+.content-box p{
+    color:#555;
+    line-height:1.9;
+    margin-bottom:1.2rem;
+}
+
+/* ==========================================
+   OBJETO SOCIAL
+========================================== */
+
+.social-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.social-image img{
+    width:100%;
+    border-radius:24px;
+
+    display:block;
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.12);
+}
+
+/* ==========================================
+   MISIÓN Y VISIÓN
+========================================== */
+
+.mission-vision{
+    background:
+    linear-gradient(
+        135deg,
+        #10355e,
+        #1c5ea8
+    );
+
+    padding:100px 0;
+}
+
+.mission-vision .container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.mission-card,
+.vision-card{
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    padding:3rem;
+
+    border-radius:24px;
+
+    color:#fff;
+
+    transition:.35s;
+}
+
+.mission-card:hover,
+.vision-card:hover{
+    transform:translateY(-8px);
+}
+
+.card-icon{
+    width:70px;
+    height:70px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.15);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:1.8rem;
+
+    margin-bottom:1.5rem;
+}
+
+.mission-card h2,
+.vision-card h2{
+    font-size:2rem;
+    margin-bottom:1rem;
+}
+
+.mission-card p,
+.vision-card p{
+    color:rgba(255,255,255,.9);
+    line-height:1.9;
+}
+
+/* ==========================================
+   BENEFICIARIOS
+========================================== */
+
+.population-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.population-image img{
+    width:100%;
+    border-radius:24px;
+
+    display:block;
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.12);
+}
+
+.population-list{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.population-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    background:#fff;
+
+    padding:18px 22px;
+
+    border-radius:16px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.06);
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.population-item:hover{
+    transform:translateX(8px);
+}
+
+.population-item i{
+    color:#2e7edb;
+    font-size:1.2rem;
+}
+
+/* ==========================================
+   PRODUCTOS
+========================================== */
+
+.products{
+    background:#f8fbff;
+}
+
+.products-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.products-image img{
+    width:100%;
+    border-radius:24px;
+
+    display:block;
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.12);
+}
+
+.products-list{
+    display:grid;
+    gap:18px;
+}
+
+.product-item{
+    background:#fff;
+
+    padding:20px 24px;
+
+    border-radius:16px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.06);
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.product-item:hover{
+    transform:translateX(8px);
+}
+
+.product-item i{
+    color:#2e7edb;
+    font-size:1.3rem;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+    .institutional-content,
+    .social-content,
+    .population-content,
+    .products-content,
+    .mission-vision .container{
+        grid-template-columns:1fr;
+    }
+
+    .page-hero{
+        min-height:55vh;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .institutional,
+    .social-purpose,
+    .mission-vision,
+    .populations,
+    .products{
+        padding:70px 0;
+    }
+
+    .content-box,
+    .mission-card,
+    .vision-card{
+        padding:2rem;
+    }
+
+    .page-title{
+        font-size:2.8rem;
+    }
+
+}
