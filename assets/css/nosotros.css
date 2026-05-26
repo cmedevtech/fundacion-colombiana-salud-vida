@@ -2,443 +2,397 @@
    HERO
 ========================================== */
 
-.page-hero{
-
+.page-hero {
     position: relative;
-
-    padding: 4rem 0;;
-
+    padding: 4rem 0;
     background:
         linear-gradient(
             rgba(255,255,255,.92),
             rgba(255,255,255,.92)
         ),
         url("../img/volu2.jpg");
-
     background-size: cover;
     background-position: center;
-
     border-bottom: 1px solid rgba(0,0,0,.05);
 }
 
-.page-hero .container{
-
+.page-hero .container {
     max-width: 900px;
-
     text-align: center;
 }
 
-/* Badge */
-
-.hero-badge{
-
+.hero-badge {
     display: inline-flex;
-
     align-items: center;
-
     padding: .7rem 1.3rem;
-
     border-radius: 999px;
-
     background: rgba(52,126,191,.08);
-
     color: var(--secondary-color);
-
     font-size: .9rem;
-
     font-weight: 600;
-
     margin-bottom: 1.5rem;
 }
 
-/* Título */
-
-.page-title{
-
+.page-title {
     font-size: clamp(3rem,5vw,4.8rem);
-
     font-weight: 700;
-
     line-height: 1.1;
-
     color: var(--primary-color);
-
     margin-bottom: 1.5rem;
-
     letter-spacing: -1px;
 }
 
-/* Descripción */
-
-.page-description{
-
+.page-description {
     max-width: 700px;
-
     margin: auto;
-
     font-size: 1.1rem;
-
     line-height: 1.8;
-
     color: var(--text-light);
 }
 
-/* Línea elegante */
-
-.page-title::after{
-
+.page-title::after {
     content: "";
-
     display: block;
-
     width: 90px;
-
     height: 4px;
-
     background: var(--secondary-color);
-
     border-radius: 20px;
-
     margin: 1.5rem auto 0;
 }
 
-/* Responsive */
+@media(max-width:768px) {
 
-@media(max-width:768px){
-
-    .page-hero{
+    .page-hero {
         padding: 5rem 0;
     }
 
-    .page-title{
+    .page-title {
         font-size: 2.4rem;
     }
 
-    .page-description{
+    .page-description {
         font-size: 1rem;
     }
+
 }
+
 
 /* ==========================================
-   SECCIONES GENERALES
+   EYEBROW
 ========================================== */
 
-.institutional,
-.social-purpose,
-.populations,
-.products{
-    padding:100px 0;
+.nos-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
 }
 
-.social-purpose{
-    background:#f8fbff;
-}
+.nos-eyebrow--green { color: #1D9E75; }
 
-.section-tag{
-    display:inline-block;
+.nos-eyebrow--light { color: #9FE1CB; }
 
-    color:#2e7edb;
-
-    font-weight:700;
-
-    text-transform:uppercase;
-
-    letter-spacing:1px;
-
-    margin-bottom:1rem;
-}
-
-.section-title{
-    font-size:clamp(2rem,4vw,3rem);
-
-    color:#10355e;
-
-    margin-bottom:2rem;
-
-    line-height:1.2;
-}
 
 /* ==========================================
-   PRESENTACIÓN
+   SECCIONES BASE
 ========================================== */
 
-.institutional-content{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
+.nos-sec {
+    padding: 80px 40px;
 }
 
-.institutional-image img{
-    width:100%;
-    border-radius:24px;
-    display:block;
+.nos-sec--gray { background: #F7F8F6; }
 
-    box-shadow:
-    0 25px 50px rgba(0,0,0,.12);
-}
+.nos-sec--dark { background: #063D30; }
 
-.content-box{
-    background:#fff;
-
-    padding:2.5rem;
-
-    border-radius:24px;
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,.08);
-}
-
-.content-box p{
-    color:#555;
-    line-height:1.9;
-    margin-bottom:1.2rem;
-}
 
 /* ==========================================
-   OBJETO SOCIAL
+   QUIÉNES SOMOS
 ========================================== */
 
-.social-content{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
+.nos-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
-.social-image img{
-    width:100%;
-    border-radius:24px;
-
-    display:block;
-
-    box-shadow:
-    0 25px 50px rgba(0,0,0,.12);
+.nos-img-block {
+    border-radius: 16px;
+    overflow: hidden;
+    height: 420px;
+    background: #9FE1CB;
 }
+
+.nos-img-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.nos-txt h2 {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 10px 0 14px;
+    color: #1a1a1a;
+}
+
+.nos-txt p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.85;
+}
+
+.nos-check-list {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+}
+
+.nos-check-list li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #555;
+}
+
+.nos-check-list li::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #1D9E75;
+    flex-shrink: 0;
+}
+
 
 /* ==========================================
-   MISIÓN Y VISIÓN
+   MISIÓN / VISIÓN
 ========================================== */
 
-.mission-vision{
-    background:
-    linear-gradient(
-        135deg,
-        #10355e,
-        #1c5ea8
-    );
-
-    padding:100px 0;
+.nos-mv-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
-.mission-vision .container{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:30px;
+.nos-center-header {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto 56px;
 }
 
-.mission-card,
-.vision-card{
-    background:rgba(255,255,255,.08);
-
-    backdrop-filter:blur(15px);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    padding:3rem;
-
-    border-radius:24px;
-
-    color:#fff;
-
-    transition:.35s;
+.nos-center-header h2 {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-top: 10px;
+    color: #1a1a1a;
 }
 
-.mission-card:hover,
-.vision-card:hover{
-    transform:translateY(-8px);
+.nos-mv-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.card-icon{
-    width:70px;
-    height:70px;
-
-    border-radius:18px;
-
-    background:rgba(255,255,255,.15);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:1.8rem;
-
-    margin-bottom:1.5rem;
+.nos-mv-box {
+    background: #fff;
+    border: 1px solid #e8ebe8;
+    border-radius: 16px;
+    padding: 36px 30px;
 }
 
-.mission-card h2,
-.vision-card h2{
-    font-size:2rem;
-    margin-bottom:1rem;
+.nos-mv-icon {
+    width: 44px;
+    height: 44px;
+    background: #E1F5EE;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    font-size: 20px;
+    color: #0F6E56;
 }
 
-.mission-card p,
-.vision-card p{
-    color:rgba(255,255,255,.9);
-    line-height:1.9;
+.nos-mv-box h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #1a1a1a;
 }
+
+.nos-mv-box p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+}
+
 
 /* ==========================================
-   BENEFICIARIOS
+   POBLACIONES
 ========================================== */
 
-.population-content{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
+.nos-dark-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
-.population-image img{
-    width:100%;
-    border-radius:24px;
-
-    display:block;
-
-    box-shadow:
-    0 25px 50px rgba(0,0,0,.12);
+.nos-dark-img {
+    border-radius: 16px;
+    overflow: hidden;
+    height: 420px;
+    background: #0F6E56;
 }
 
-.population-list{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
+.nos-dark-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: .85;
 }
 
-.population-item{
-    display:flex;
-    align-items:center;
-    gap:15px;
-
-    background:#fff;
-
-    padding:18px 22px;
-
-    border-radius:16px;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,.06);
-
-    font-weight:600;
-
-    transition:.3s;
+.nos-dark-txt h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+    margin: 10px 0 20px;
 }
 
-.population-item:hover{
-    transform:translateX(8px);
+.nos-dark-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 0;
 }
 
-.population-item i{
-    color:#2e7edb;
-    font-size:1.2rem;
+.nos-dark-list li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 14px;
+    color: rgba(255,255,255,.8);
 }
+
+.nos-dark-list li i {
+    font-size: 17px;
+    color: #5DCAA5;
+    flex-shrink: 0;
+    width: 20px;
+    text-align: center;
+}
+
 
 /* ==========================================
-   PRODUCTOS
+   PROPÓSITO INSTITUCIONAL
 ========================================== */
 
-.products{
-    background:#f8fbff;
+.nos-proposito {
+    background: #F7F8F6;
 }
 
-.products-content{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
+.nos-proposito-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
-.products-image img{
-    width:100%;
-    border-radius:24px;
-
-    display:block;
-
-    box-shadow:
-    0 25px 50px rgba(0,0,0,.12);
+.nos-proposito-title {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #1a1a1a;
+    margin: 10px 0 20px;
 }
 
-.products-list{
-    display:grid;
-    gap:18px;
+.nos-proposito-box p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.85;
+    margin-bottom: 16px;
 }
 
-.product-item{
-    background:#fff;
-
-    padding:20px 24px;
-
-    border-radius:16px;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,.06);
-
-    display:flex;
-    align-items:center;
-    gap:15px;
-
-    font-weight:600;
-
-    transition:.3s;
+.nos-proposito-box p:last-child {
+    margin-bottom: 0;
 }
 
-.product-item:hover{
-    transform:translateX(8px);
+.nos-proposito-image {
+    border-radius: 16px;
+    overflow: hidden;
+    height: 420px;
+    background: #9FE1CB;
 }
 
-.product-item i{
-    color:#2e7edb;
-    font-size:1.3rem;
+.nos-proposito-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
+
 
 /* ==========================================
    RESPONSIVE
 ========================================== */
 
-@media(max-width:992px){
+@media(max-width:992px) {
 
-    .institutional-content,
-    .social-content,
-    .population-content,
-    .products-content,
-    .mission-vision .container{
-        grid-template-columns:1fr;
+    .nos-split,
+    .nos-mv-row,
+    .nos-dark-split,
+    .nos-proposito-content {
+        grid-template-columns: 1fr;
     }
 
-    .page-hero{
-        min-height:55vh;
+    .nos-img-block,
+    .nos-dark-img,
+    .nos-proposito-image {
+        height: 280px;
+    }
+
+    .page-hero {
+        min-height: 55vh;
     }
 
 }
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
-    .institutional,
-    .social-purpose,
-    .mission-vision,
-    .populations,
-    .products{
-        padding:70px 0;
+    .nos-sec {
+        padding: 56px 24px;
     }
 
-    .content-box,
-    .mission-card,
-    .vision-card{
-        padding:2rem;
+    .nos-mv-section {
+        padding: 64px 24px;
     }
 
-    .page-title{
-        font-size:2.8rem;
+    .nos-center-header {
+        margin-bottom: 36px;
+    }
+
+    .page-title {
+        font-size: 2.8rem;
     }
 
 }

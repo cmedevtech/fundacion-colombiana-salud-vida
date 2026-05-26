@@ -19,7 +19,7 @@
         --text-muted:    #7a7f8c;
         --white:         #ffffff;
 
-        --font-display:  'Fraunces', Georgia, serif;
+        --font-display:  'DM Sans', Georgia, serif;
         --font-body:     'DM Sans', sans-serif;
 
         --radius-sm:  12px;
@@ -46,9 +46,6 @@
         -webkit-font-smoothing: antialiased;
     }
 
-    /* ==========================================
-        HERO — Fondo oscuro con patrón de líneas
-    ========================================== */
 
 /* ==========================================
 HERO DOCUMENTOS
@@ -107,7 +104,7 @@ HERO DOCUMENTOS
 
 .page-title{
 
-    font-size: clamp(3rem,5vw,4.8rem);
+    font-size: clamp(2rem,4vw,4.8rem);
 
     font-weight: 700;
 
@@ -124,13 +121,13 @@ HERO DOCUMENTOS
 
 .page-description{
 
-    max-width: 700px;
+    max-width: 1000px;
 
     margin: auto;
 
-    font-size: 1.1rem;
+    font-size: 1rem;
 
-    line-height: 1.8;
+    line-height: 1.;
 
     color: var(--text-light);
 }

@@ -1,229 +1,344 @@
-/* ===================================
-   CONTACTO - FUNDACIÓN
-=================================== */
+/* ==========================================
+   HERO
+========================================== */
 
-:root {
-    --primary: #009966;
-    --primary-dark: #007a52;
-    --secondary: #0f172a;
-    --text: #475569;
-    --white: #ffffff;
-    --light: #f8fafc;
-    --border: #e2e8f0;
-    --shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
+.page-hero{
 
-/* HERO */
+    position: relative;
 
-.page-hero {
-    padding: 180px 0 100px;
-    text-align: center;
+    padding: 4rem 0;;
+
     background:
-        linear-gradient(rgba(15, 23, 42, 0.75),
-        rgba(15, 23, 42, 0.75)),
-        url("../img/contacto-bg.jpg");
+        linear-gradient(
+            rgba(255,255,255,.92),
+            rgba(255,255,255,.92)
+        ),
+        url("../img/hero1.jpg");
+
     background-size: cover;
     background-position: center;
-    color: var(--white);
+
+    border-bottom: 1px solid rgba(0,0,0,.05);
 }
 
-.hero-badge {
-    display: inline-block;
-    padding: 10px 22px;
-    border-radius: 50px;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: var(--white);
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    backdrop-filter: blur(10px);
+.page-hero .container{
+
+    max-width: 900px;
+
+    text-align: center;
 }
 
-.page-title {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 20px;
-}
+/* Badge */
 
-.page-description {
-    max-width: 750px;
-    margin: 0 auto;
-    font-size: 1.15rem;
-    line-height: 1.8;
-    opacity: 0.9;
-}
+.hero-badge{
 
-/* SECCIÓN CONTACTO */
-
-.contact-section {
-    padding: 100px 0;
-    background: linear-gradient(
-        180deg,
-        #f8fafc 0%,
-        #ffffff 100%
-    );
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-/* TARJETAS */
-
-.contact-card {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 24px;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-    transition: 0.4s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.contact-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(
-        90deg,
-        var(--primary),
-        #22c55e
-    );
-}
-
-.contact-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-}
-
-.contact-card h3 {
-    font-size: 1.4rem;
-    color: var(--secondary);
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.contact-card p {
-    color: var(--text);
-    line-height: 1.8;
-    margin-bottom: 10px;
-    font-size: 1rem;
-}
-
-/* BOTÓN */
-
-.contact-card .btn {
-    margin-top: 15px;
-}
-
-.btn-primary {
     display: inline-flex;
+
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 14px 28px;
-    border-radius: 12px;
-    text-decoration: none;
-    background: var(--primary);
-    color: var(--white);
+
+    padding: .7rem 1.3rem;
+
+    border-radius: 999px;
+
+    background: rgba(52,126,191,.08);
+
+    color: var(--secondary-color);
+
+    font-size: .9rem;
+
     font-weight: 600;
-    transition: 0.3s ease;
+
+    margin-bottom: 1.5rem;
 }
 
-.btn-primary:hover {
-    background: var(--primary-dark);
-    transform: translateY(-3px);
+/* Título */
+
+.page-title{
+
+    font-size: clamp(3rem,5vw,4.8rem);
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    color: var(--primary-color);
+
+    margin-bottom: 1.5rem;
+
+    letter-spacing: -1px;
 }
 
-/* ANIMACIÓN */
+/* Descripción */
 
-.contact-card {
-    animation: fadeUp 0.8s ease forwards;
+.page-description{
+
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    color: var(--text-light);
 }
 
-.contact-card:nth-child(2) {
-    animation-delay: .1s;
+/* Línea elegante */
+
+.page-title::after{
+
+    content: "";
+
+    display: block;
+
+    width: 90px;
+
+    height: 4px;
+
+    background: var(--secondary-color);
+
+    border-radius: 20px;
+
+    margin: 1.5rem auto 0;
 }
 
-.contact-card:nth-child(3) {
-    animation-delay: .2s;
-}
+/* Responsive */
 
-.contact-card:nth-child(4) {
-    animation-delay: .3s;
-}
+@media(max-width:768px){
 
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
+    .page-hero{
+        padding: 5rem 0;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .page-title{
+        font-size: 2.4rem;
+    }
+
+    .page-description{
+        font-size: 1rem;
     }
 }
 
-/* RESPONSIVE */
+    /* ==========================================
+    SECCIÓN DOCUMENTOS
+    ========================================== */
 
-@media (max-width: 992px) {
-
-    .page-hero {
-        padding: 150px 0 80px;
+    .documents {
+        padding: 7rem 0 8rem;
+        background: var(--white);
     }
 
-    .contact-grid {
-        grid-template-columns: 1fr;
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
     }
 
-    .contact-card {
-        padding: 35px;
+    /* Encabezado de sección */
+    .section-header {
+        margin-bottom: 3.5rem;
+        display: flex;
+        align-items: flex-end;
+        gap: 2rem;
+        justify-content: space-between;
     }
 
+    .section-tag {
+        display: inline-block;
+        font-size: .72rem;
+        font-weight: 500;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        padding-bottom: .4rem;
+        border-bottom: 1px solid var(--accent);
+    }
+
+    .section-title {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        font-weight: 600;
+        color: var(--primary);
+        line-height: 1.1;
+        letter-spacing: -.02em;
+        margin: .5rem 0 0;
+    }
+
+    .section-count {
+        font-size: .85rem;
+        color: var(--text-muted);
+        white-space: nowrap;
+        padding-bottom: .4rem;
+    }
+
+    /* ==========================================
+    GRID DE DOCUMENTOS
+    ========================================== */
+
+    .documents-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
+
+/* ==========================================
+   CONTACTO
+========================================== */
+
+.contact-section{
+
+    padding: 6rem 0;
+
+    background: #f8fafb;
 }
 
-@media (max-width: 768px) {
+.contact-grid{
 
-    .page-title {
-        font-size: 2.3rem;
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 2rem;
+}
+
+.contact-card{
+
+    background: #ffffff;
+
+    padding: 2.5rem;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(16,53,94,.08);
+
+    transition: .3s ease;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.04);
+}
+
+.contact-card:hover{
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 20px 40px rgba(16,53,94,.10);
+}
+
+.contact-card h3{
+
+    color: #10355E;
+
+    font-size: 1.3rem;
+
+    font-weight: 700;
+
+    margin-bottom: 1rem;
+}
+
+.contact-card p{
+
+    color: #5f6b77;
+
+    line-height: 1.8;
+
+    margin-bottom: .4rem;
+}
+
+.contact-card .btn{
+
+    margin-top: 1rem;
+}
+
+/* ==========================================
+   BOTÓN WHATSAPP
+========================================== */
+
+.contact-card .btn-primary{
+
+    background: #10355E;
+
+    border: none;
+
+    padding: .9rem 1.5rem;
+
+    border-radius: 50px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: .3s ease;
+}
+
+.contact-card .btn-primary:hover{
+
+    background: #0d2b4b;
+
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   DESTACAR WHATSAPP
+========================================== */
+
+.contact-card:last-child{
+
+    background: linear-gradient(
+        135deg,
+        #10355E,
+        #1b5fa5
+    );
+
+    color: white;
+}
+
+.contact-card:last-child h3{
+
+    color: white;
+}
+
+.contact-card:last-child p{
+
+    color: rgba(255,255,255,.85);
+}
+
+.contact-card:last-child .btn-primary{
+
+    background: white;
+
+    color: #10355E;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .page-hero{
+
+        padding: 4rem 0;
     }
 
-    .page-description {
+    .page-title{
+
+        font-size: 2.4rem;
+    }
+
+    .page-description{
+
         font-size: 1rem;
     }
 
-    .contact-section {
-        padding: 70px 0;
+    .contact-grid{
+
+        grid-template-columns: 1fr;
     }
 
-    .contact-card {
-        padding: 30px;
-        border-radius: 20px;
-    }
+    .contact-card{
 
-}
-
-@media (max-width: 480px) {
-
-    .page-hero {
-        padding: 130px 0 70px;
-    }
-
-    .contact-card {
-        padding: 25px;
-    }
-
-    .contact-card h3 {
-        font-size: 1.2rem;
+        padding: 2rem;
     }
 
 }
